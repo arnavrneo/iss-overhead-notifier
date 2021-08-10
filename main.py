@@ -12,7 +12,7 @@ MY_LONG = 74.6  # Your longitude
 def is_iss_overhead():
     response = requests.get(url="http://api.open-notify.org/iss-now.json")
     response.raise_for_status()
-    data = response.json()
+    data = response.json()  # the data we get is in .json format in the form of dicitionary.
 
     iss_latitude = float(data["iss_position"]["latitude"])
     iss_longitude = float(data["iss_position"]["longitude"])
